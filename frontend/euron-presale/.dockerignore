@@ -1,0 +1,30 @@
+# Ignore version control files
+.git
+.gitignore
+
+# Ignore dependencies folder (will be rebuilt in the container)
+node_modules
+
+# Ignore environment files (use env_file in docker-compose.yml instead)
+.env
+.env.local
+.env.development
+.env.production
+
+# Ignore logs and temporary files
+npm-debug.log
+yarn-error.log
+*.log
+.DS_Store
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+
+# Ignore build artifacts (if any)
+dist/
+
+# Ignore sensitive files
+*.key
+*.pem

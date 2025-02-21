@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "ae43d56b-affa-4b82-b29b-d957d2968fe2",
+		"name": "Euron",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11161676"
+	},
+	"item": [
+		{
+			"name": "referral",
+			"item": [
+				{
+					"name": "generate-service",
+					"item": [
+						{
+							"name": "generate_ref_code",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"address\": \"0x820323dbd577f1c7cB686059d156eD1E21B1A531\",\n    \"ref_code\": \"abcde10\",\n    \"is_manager_code\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://0.0.0.0:8081/create_ref",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8081",
+									"path": [
+										"create_ref"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "query-service",
+					"item": [
+						{
+							"name": "get_ref",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8083/address/0x820323dbd577f1c7cB686059d156eD1E21B1A530",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8083",
+									"path": [
+										"address",
+										"0x820323dbd577f1c7cB686059d156eD1E21B1A530"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all referrals",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8083/referrals",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8083",
+									"path": [
+										"referrals"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "available_referrals",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8083/available_referrals",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8083",
+									"path": [
+										"available_referrals"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "claim-service",
+					"item": [
+						{
+							"name": "use referrals",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8082/claim/abcde16",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8082",
+									"path": [
+										"claim",
+										"abcde16"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
